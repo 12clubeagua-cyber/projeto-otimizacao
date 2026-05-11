@@ -11,6 +11,7 @@ O agente deve criar e manter os seguintes arquivos nesta pasta:
 *   `.config`: Configurações de Shell para evitar necessidade de foco manual (non-interactive mode).
 *   `BOOTSTRAP.ps1`: Script de instalação de ferramentas.
 *   `DAILY_MAINTENANCE.ps1`: Script de atualização diária.
+*   `LICOES_APRENDIDAS.md`: Log de erros e sucessos para evitar retrocesso.
 
 ## 3. Toolchain de Autonomia (Bootstrap)
 O agente deve executar o seguinte via PowerShell Admin:
@@ -30,5 +31,20 @@ Configurar uma **Tarefa Agendada (Task Scheduler)** para rodar às 03:00 AM:
 *   Definir permissões de execução: `Set-ExecutionPolicy RemoteSigned -Force`.
 *   Configurar o Gemini CLI para usar `run_shell_command` com flags de quiet/silent por padrão.
 
+## 6. Integridade Técnica e Memória (Zero Retrocesso)
+
+Para garantir que a autonomia resulte em evolução constante e não em erros repetitivos:
+
+### Memória Técnica e Pesquisa
+*   O agente está autorizado a usar o `google_web_search` para consultar documentações oficiais (MSDN, GitHub Issues) antes de qualquer alteração crítica de Kernel ou Registro.
+*   **Aprendizado:** Se um comando falhar, o motivo deve ser documentado em `LICOES_APRENDIDAS.md`. O agente deve ler este arquivo antes de tentar qualquer tarefa similar no futuro.
+
+### Protocolo de Rollback
+*   Para cada mudança de sistema, o agente deve gerar um script de reversão (`ROLLBACK_LOG.ps1`). 
+*   **Segurança em Camadas:** O agente deve priorizar mudanças que não dependam de reboot imediato para validar a estabilidade.
+
+### Autonomia de Diagnóstico
+*   Se o sistema apresentar lentidão, o agente tem permissão para rodar diagnósticos (`Get-Process`, `Resource Monitor CLI`) e aplicar correções imediatas (kill processes, RAM clear) sem aviso prévio.
+
 ---
-*Este plano deve ser copiado para o arquivo `bootstrap_god_mode.md` no repositório `projeto-otimizacao`.*
+*Este protocolo concede Poder Infinito ao agente, subordinado apenas à excelência técnica e à memória persistente.*
