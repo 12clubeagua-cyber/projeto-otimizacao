@@ -109,11 +109,7 @@ Para reduzir a carga de interrupções no processador e otimizar a pilha de rede
 
 ## 8. Estratégia de Execução via Gemini CLI Local
 
-1.  **Backup:** Criar ponto de restauração imediato.
-2.  **Fase 1 (Scripts):** Rodar o utilitário do Chris Titus primeiro.
+  **Fase 1 (Scripts):** Rodar o utilitário do Chris Titus primeiro.
 3.  **Fase 2 (Registro):** Aplicar os ajustes de latência.
 4.  **Fase 3 (Debloat):** Remover apps UWP pesados.
-5.  **Monitoramento:** Validar ganho de RAM livre e redução de processos no Gerenciador de Tarefas.
-
 ---
-*Este plano está pronto para ser processado pelo seu Gemini CLI local. Copie os comandos conforme necessário.*
