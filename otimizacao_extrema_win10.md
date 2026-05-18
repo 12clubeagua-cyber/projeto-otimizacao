@@ -43,13 +43,11 @@ Estes comandos devem ser executados no **PowerShell como Administrador** via Gem
 
 ## 5. Otimizações de "Nível Kernel" e Drivers (Hardcore)
 
-Para quem quer o máximo absoluto e não se importa em mexer nas entranhas do sistema:
-
 ### Interrupções de Hardware (MSI Mode)
 *   **MSI Mode Utility:** Ferramenta para mudar drivers de "Line-based" para "Message Signaled Interrupts". Isso reduz a carga da CPU ao lidar com hardware (GPU, Áudio, Rede).
 
 ### Latência do Sistema (Timer Resolution)
-*   **Intelligent Standby List Cleaner (ISLC):** Mantém a "Timer Resolution" em 0.5ms (padrão é 1ms ou mais) e limpa a lista de espera da RAM automaticamente. Vital para manter a fluidez em apenas 4GB.
+*   **Intelligent Standby List Cleaner (ISLC):** Mantém a "Timer Resolution" em 0.5ms e limpa a lista de espera da RAM automaticamente.
 
 ### Sistema de Arquivos (NTFS)
 *   **Desativar Nomes 8.3:** Evita que o Windows cria nomes curtos compatíveis com MS-DOS:
