@@ -26,7 +26,6 @@ Estes comandos devem ser executados no **PowerShell como Administrador** via Gem
 ### Memória e Processamento (O Gargalo de 4GB)
 *   **Pagefile Fixo:** Definir tamanho fixo (ex: 4096-8192 MB) no SSD para evitar overhead de redimensionamento.
 *   **SysMain (Superfetch):** Desativar completamente para aliviar a carga constante no disco e CPU.
-*   **Windows Memory Cleaner:** Utilizar ferramenta open-source para limpeza periódica de cache de RAM.
 
 ## 3. Gerenciamento de Energia e Hardware
 
