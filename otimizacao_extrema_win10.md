@@ -61,10 +61,7 @@ Estes comandos devem ser executados no **PowerShell como Administrador** via Gem
 
 ## 6. Ferramentas de Limpeza Manual e Registro de Cache
 
-Para evitar processos em segundo plano, utilizaremos um script manual e um ajuste de registro para otimizar como o Windows gerencia o cache.
-
 ### Ajuste de Registro: LargeSystemCache
-Este ajuste faz com que o Windows priorize a estabilidade do cache de sistema, ideal para quem tem pouca RAM e quer evitar que o sistema "se perca" gerenciando memória.
 *   **Caminho:** `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management`
 *   **Valor:** `LargeSystemCache` = `0` (Para 4GB de RAM, manter em 0 evita que o cache do sistema "atropele" a RAM disponível para seus programas).
 
